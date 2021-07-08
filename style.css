@@ -1,0 +1,206 @@
+/* Variables */
+
+:root {
+  /* Font colors */
+  --color0: black;
+  --color1: white;
+
+  /* Background colors */
+  --bgColor0: rgb(233, 186, 210);
+  --bgColor1: khaki;
+  --bgColor2: rgb(207, 207, 179);
+
+  /* Linear gradient background colors */
+  --lgBgColor0: rgb(236, 181, 181);
+  --lgBgColor1: rgb(118, 202, 118);
+  --lgBgColor2: rgb(99, 99, 214);
+
+  /* Effects */
+
+  --transform: scale(1.1);
+  --handMouse: pointer;
+  --transition: ease-in-out 0.2s;
+}
+
+/* Caractéristiques générales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color0);
+}
+
+button {
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  background-color: var(--color0);
+  color: var(--color1);
+}
+
+span {
+  color: var(--color1);
+}
+
+/* Body */
+
+body {
+  /* Fonts */
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  max-width: 90%;
+  /* Height */
+  min-height: 100vh;
+  margin: auto;
+  /* Background */
+  background: linear-gradient(var(--lgBgColor0), transparent),
+    linear-gradient(to top left, var(--lgBgColor1), transparent),
+    linear-gradient(to top right, var(--lgBgColor2), transparent);
+  background-blend-mode: screen;
+}
+
+/* Nav */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .iconeName {
+  display: flex;
+  align-items: center;
+}
+
+nav .iconeName a {
+  margin: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 1rem;
+}
+
+/* Header */
+
+header {
+  border: solid 1.2rem var(--color1);
+  border-radius: 20px;
+  font-family: "Righteous", cursive;
+  height: 70%;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+header h1 {
+  font-size: 7rem;
+  margin: 7rem 0 2rem 0;
+}
+
+header p {
+  margin: 1rem 0 5rem 0;
+}
+
+header button {
+  border: none;
+  border-radius: 30px;
+  background-color: var(--color1);
+  color: var(--color0);
+  width: 20rem;
+  padding: 2rem 4.5rem;
+  margin-bottom: 4rem;
+}
+
+header button .inButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  margin-top: 1rem;
+}
+
+footer #containerDown {
+  border-radius: 20px;
+  width: 30%;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+footer #containerDown h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+footer #containerDown p {
+  margin-bottom: 1rem;
+}
+
+/* Background divs */
+
+footer .div0 {
+  background-color: var(--bgColor0);
+}
+
+footer .div1 {
+  background-color: var(--bgColor1);
+}
+
+footer .div2 {
+  background-color: var(--bgColor2);
+}
+
+/* Effects */
+
+button:hover {
+  cursor: pointer;
+  transform: var(--transform);
+  transition: var(--transition);
+}
+
+#containerDown:hover {
+  cursor: pointer;
+  transform: var(--transform);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: red;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 750px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer #containerDown {
+    width: 100%;
+  }
+}
